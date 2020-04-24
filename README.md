@@ -1,3 +1,31 @@
+## Project: StudentDashboard
+Als eindopdracht gaan jullie een "real life" project maken. Dit wordt een project waarvan het eindresultaat dus ook echt voor de Winc Academy gebruikt gaat worden: namelijk een Student Dashboard! 
+
+Doel: het gemakkelijk maken voor Winc docenten om in één overzicht te zien hoe de studenten de opdrachten evalueren
+Huidige situatie: Excellen, Excellen, Excellen..... 
+Design: We zouden graag, per opdracht, de evaluatie van iedere student willen zien in een "Bar Chart".
+Tools:Maak gebruik van een JavaScript framework zoals React.
+
+###### Clone of download het project van Github. 
+
+### Project focus
+Het doel van het project is om vertrouwd te raken met React, React Routing en gebruikt te maken van react libary (voor grafieken). De app is gemaakt in de zesde (en laatste) week van de opleiding. 
+
+### Project eisen
+- [x] Als je de pagina (tool) opent zien we gelijk een staafdiagram met de evaluaties voor alle dagen van alle studenten – Laat een staafdiagram zien van de evaluaties (meting van beide cijfers tegelijk)
+- [x] Per student aparte Routing - op deze dedicated pagina's voor studenten krijg je een ander soort grafiek / overzicht te zien
+- [x] Als gebruiker van de tool kan je op een aantal manieren de data "slicen en dicen":
+1. Een of beide metingen weergeven (dus óf hoe leuk de opdracht was, óf hoe moeilijk, óf beide!)
+2. Weergave van de metingen van meerdere mensen (maar niet iedereen) - dus filteren op naam van de studenten die je wilt laten weergeven (van een of n-aantal studenten). 
+Met een checkbox de verschillende studenten selecteren die je wilt weergeven]***
+3. Gemiddelde cijfer in de vorm van line chart
+    - van een student voor alle opdrachten
+    - van een opdracht over alle studenten
+
+### Credits
+Aan de geweldige mensen van Winc Academy.
+
+### How to run
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
