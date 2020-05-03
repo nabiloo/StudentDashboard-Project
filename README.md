@@ -1,3 +1,5 @@
+![Demo](./src/Screenshot.png)
+
 ## Project: StudentDashboard
 Als eindopdracht gaan jullie een "real life" project maken. Dit wordt een project waarvan het eindresultaat dus ook echt voor de Winc Academy gebruikt gaat worden: namelijk een Student Dashboard! 
 
