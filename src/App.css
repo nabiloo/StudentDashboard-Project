@@ -4,9 +4,26 @@
 }
 
 .Header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-weight: bold;
   color: rgb(63, 9, 56);
+}
 
+.Header h1 {
+  margin-left: 30px;
+  
+
+}
+
+
+.link {
+  border: 3px solid rgb(87, 25, 78);
+  padding: 5px 10px;
+  border-radius: 10px;
+  color: rgb(46, 13, 41);  
+  text-decoration: none;
 }
 
 .MainPage {
@@ -19,7 +36,9 @@
 .MainPageCheckboxButtons {
   background-color: rgb(87, 25, 78);;
   color: white;
-  padding: 10px ;
+  padding: 2px ;
+  font-size: 15px;
+  font-weight: bolder;
 }
 
 label {
@@ -29,6 +48,7 @@ label {
 
 .MainPageRatingButtons {
   padding: 10px 0;
+
   
 }
 
@@ -37,7 +57,10 @@ label {
 }
 
 .StudentPage  {
-  background-color: rgb(178, 188, 218);
+  border-bottom: 2px solid rgb(15, 36, 94);;
+  border-left: 2px solid rgb(15, 36, 94);;
+  border-right: 2px solid rgb(15, 36, 94);;
+  padding-bottom: 30px;
   height: 470px;
   width: 800px;
   margin: auto;
@@ -55,6 +78,7 @@ label {
   color: rgb(48, 49, 49);
   font-size: 10px;
   text-decoration: none; 
+  margin-bottom: 30px;
 }
 
 .StudentFooterButtons  {
@@ -71,4 +95,31 @@ label {
   color: rgb(63, 9, 56);
   text-decoration: none; 
 
+}
+
+.enjoyableGeneral {
+  color: rgb(114, 25, 90);
+  font-weight: bold;
+  font-size: 15px;
+}
+
+
+.difficultyGeneral {
+  color: rgb(12, 114, 119);
+  font-weight: bolder;
+  font-size: 15px;
+}
+
+
+.enjoyableStudent {
+  color: rgb(173, 51, 32);
+  font-weight: bold;
+  font-size: 15px;
+}
+
+
+.difficultyStudent {
+  color: rgb(9, 83, 153);
+  font-weight: bolder;
+  font-size: 15px;
 }

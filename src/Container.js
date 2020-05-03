@@ -10,79 +10,67 @@ class Container extends React.Component {
     constructor() {
         super()
         this.state = {
-            challenges: [],
-            averageRating: [5, 5, 3, 2, 4, 5, 2, 5, 1, 5],
-            studentNames: []
+            data: Data,
+            difficulty: true,
+            enjoyable: true,
         }
     }
 
-
     render() {
+        const handleCheckBoxesChange = (event) => {
+            const { name, checked } = event.target
+            this.setState({
+                [name]: checked
+            })
+        }
 
-        const challengesNotUnique = Data.map(item => {
-            return item.challenge
+        const uniqueChallenges = [...new Set(Data.map(item => item.challenge))]
+
+        const uniqueNames = [...new Set(Data.map(item => item.name))]
+
+        const newChallange = uniqueChallenges.map(chall => {
+            const filtered = Data.filter(student => student.challenge === chall)
+            return filtered
         })
-        const uniqueChallenges = [...new Set(challengesNotUnique)]
-        this.state.challenges = uniqueChallenges
 
-
-        const namesNotUnique = Data.map(item => {
-            return item.name
+        const averageRatingDifficulty = newChallange.map(row => {
+            const difficultyReduce = row.map(item => item.difficulty).reduce((total, number) => total + number)
+            return difficultyReduce / 10
         })
-        const uniqueNames = [...new Set(namesNotUnique)]
-        this.state.studentNames = uniqueNames
 
-
-
-        // this.setState({ challenges: this.state.challenges = uniqueChallenges })
-
-        // const averageGrade = (numbersArray) => {
-        //     const totalItems = numbersArray.reduce((total, item) => total + item)
-        //     return totalItems / numbersArray.length
-        // }
-
-
-        // const allChallengesArray = []
-        // this.state.students.forEach(item => {
-        //     if (!allChallengesArray.includes(item.challenge)) {
-        //         allChallengesArray.push(item.challenge)
-        //     }
-        //     return allChallengesArray
-        // })
-
-        // "name": "Storm",
-        // "challenge": "W1D4 - Project - Kleurentoggle",
-        // "difficulty": 3,
-        // "enjoyable": 2
-
-
+        const averageRatingEnjoyable = newChallange.map(row => {
+            const enjoyableReduce = row.map(item => item.enjoyable).reduce((total, number) => total + number)
+            return enjoyableReduce / 10
+        })
 
         return (
-            <div>
-                <BrowserRouter>
-                    <Header />
+            <BrowserRouter>
+                <Header />
 
+                <Route
+                    path='/' exact
+                    render={(props) => <MainPage {...props}
+                        state={{ ...this.state }}
+                        handleCheckBoxesChange={handleCheckBoxesChange}
+                        uniqueChallengesArray={uniqueChallenges}
+                        averageRatingDifficulty={averageRatingDifficulty}
+                        averageRatingEnjoyable={averageRatingEnjoyable} />}
+                />
+
+                {uniqueNames.map((studentName, index) => (
                     <Route
-                        path='/' exact
-                        render={(props) => <MainPage {...props} state={{ ...this.state }} />}
+                        path={`/${studentName}`} exact key={index}
+                        render={props => <StudentPage {...props} state={{ ...this.state }}
+                            name={studentName}
+                            handleCheckBoxesChange={handleCheckBoxesChange}
+                            uniqueChallengesArray={uniqueChallenges} />}
                     />
+                ))}
 
-                    {this.state.studentNames.map(studentName => (
-                        <Route
-                            path={`/${studentName}`} exact
-                            render={props => <StudentPage {...props} state={{ ...this.state }} name={studentName} />}
-                        />
-                    ))}
-
-                    <Footer studentNames={this.state.studentNames} />
-                </BrowserRouter>
-            </div >
+                <Footer studentNames={uniqueNames} />
+            </BrowserRouter>
         )
     }
-
 }
-
-
-
 
 export default Container 
