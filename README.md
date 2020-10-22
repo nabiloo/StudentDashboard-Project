@@ -1,26 +1,27 @@
 ![Demo](./src/Screenshot.png)
 
 ## Project: StudentDashboard
-Als eindopdracht gaan jullie een "real life" project maken. Dit wordt een project waarvan het eindresultaat dus ook echt voor de Winc Academy gebruikt gaat worden: namelijk een Student Dashboard! 
+As a final assignment you will make a "real life" project. This will be a project of which the end result will actually be used by Winc Academy: namely a Student Dashboard!
 
-Doel: het gemakkelijk maken voor Winc docenten om in één overzicht te zien hoe de studenten de opdrachten evalueren
-Huidige situatie: Excellen, Excellen, Excellen..... 
-Design: We zouden graag, per opdracht, de evaluatie van iedere student willen zien in een "Bar Chart".
-Tools:Maak gebruik van een JavaScript framework zoals React.
+Purpose: to make it easy for Winc teachers to see a overview of how students rate their projects.
+Current situation: excel, excel, excel .....
+Design: We would like to see the evaluation of each student in a "Bar Chart" for each assignment.
+Tools: Use a JavaScript framework such as React.
 
 ###### Clone of download het project van Github. 
 
 ### Project focus
-Het doel van het project is om vertrouwd te raken met React, React Routing en gebruikt te maken van react libary (voor grafieken). De app is gemaakt in de zesde (en laatste) week van de opleiding. 
+The aim of the project is to familiarize yourself with React, React Routing and to make use of react libary (for graphs). The app was created at the final week of the training.
 
-### Project eisen
-- [x] Als je de pagina (tool) opent zien we gelijk een staafdiagram met de evaluaties voor alle dagen van alle studenten – Laat een staafdiagram zien van de evaluaties (meting van beide cijfers tegelijk)
-- [x] Per student aparte Routing - op deze dedicated pagina's voor studenten krijg je een ander soort grafiek / overzicht te zien
-- [x] Als gebruiker van de tool kan je op een aantal manieren de data "slicen en dicen": Een of beide metingen weergeven (dus óf hoe leuk de opdracht was, óf hoe moeilijk, óf beide!)
- - [x] Design: Maak een tool waar je trots op bent en wat je aan een toekomstige werkgever zou willen laten zien.
+### Project requirements
+- [x] When opening the page, the page immediately shows a bar-chart with the evaluations for all days of all students - Show a bar chart of the evaluations 
+- [x] Separate Routing per student - on the dedicated page for student you will see a different kind of graph / overview
+- [x] As a user you can "slice and dice" the data in a number of ways: Display one or both measurements (so either how fun the assignment was, or how difficult, or both!)
+ - [x] Design: Create a tool that makes you proud and that you would like to show to a future employer.
+
 
 ### Credits
-Aan de geweldige mensen van Winc Academy.
+To the lovely people of Winc Academy.
 
 ### How to run
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
